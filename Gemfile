@@ -28,13 +28,22 @@ gem 'puma', '~> 3.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  
+
   # Use RSpec for specs
   gem 'rspec-rails', '>= 3.5.0'
 
   # Use Factory Girl for generating random test data
   gem 'factory_girl_rails'
+
+  # Provides RSpec with additional matchers.
+  gem 'shoulda-matchers', '~> 3.1'
+  # A library for generating fake data. We'll use this to generate test data.
+  gem 'faker'
+  # You guessed it! It literally cleans our test database to ensure a clean state in each test suite.
+  gem 'database_cleaner'
 end
+
+
 
 group :development do
   gem 'listen', '~> 3.0.5'
