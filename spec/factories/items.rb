@@ -1,7 +1,8 @@
+# spec/factories/items.rb
 FactoryGirl.define do
   factory :item do
-    name "MyString"
+    name { Faker::StarWars.character }
     done false
-    todo nil
+    todo_id nil
   end
 end
